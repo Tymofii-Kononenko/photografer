@@ -14,26 +14,46 @@
   <noscript>
     <link rel="stylesheet" href="./css/styles.css" />
   </noscript>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src-elem 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline';">
 </head>
 
 <body>
   <header class="header" id="header">
-    <load src="./partials/header.html" />
+    <div id="header-content"></div>
   </header>
 
   <main>
-    <load src="./partials/hero.html" />
-    <load src="./partials/aboutme.html" />
-    <load src="./partials/benefits.html" />
-    <load src="./partials/projects.html" />
-    <load src="./partials/faq.html" />
-    <load src="./partials/covers.html" />
-    <load src="./partials/reviews.html" />
+    <div id="hero-content"></div>
+    <div id="aboutme-content"></div>
+    <div id="benefits-content"></div>
+    <div id="projects-content"></div>
+    <div id="faq-content"></div>
+    <div id="covers-content"></div>
+    <div id="reviews-content"></div>
   </main>
 
   <footer>
-    <load src="./partials/worktogether.html" />
+    <div id="worktogether-content"></div>
   </footer>
+
+  <script>
+    async function loadContent(id, url) {
+      const response = await fetch(url);
+      const content = await response.text();
+      document.getElementById(id).innerHTML = content;
+    }
+
+    loadContent('header-content', './partials/header.html');
+    loadContent('hero-content', './partials/hero.html');
+    loadContent('aboutme-content', './partials/aboutme.html');
+    loadContent('benefits-content', './partials/benefits.html');
+    loadContent('projects-content', './partials/projects.html');
+    loadContent('faq-content', './partials/faq.html');
+    loadContent('covers-content', './partials/covers.html');
+    loadContent('reviews-content', './partials/reviews.html');
+    loadContent('worktogether-content', './partials/worktogether.html');
+  </script>
 
   <script type="module" src="./js/aboutme.js" defer></script>
   <script type="module" src="./js/projects.js" defer></script>
