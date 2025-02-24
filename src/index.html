@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GelDlaDushy</title>
+  <link rel="icon" type="image/svg+xml" href="./img/favicon/faviconport.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="preload" href="./css/styles.css" as="style" onload="this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </noscript>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline';">
+</head>
+
+<body>
+  <header class="header" id="header">
+    <load src="./partials/header.html" />
+  </header>
+
+  <main>
+    <load src="./partials/hero.html" />
+    <load src="./partials/aboutme.html" />
+    <load src="./partials/benefits.html" />
+    <load src="./partials/projects.html" />
+    <load src="./partials/faq.html" />
+    <load src="./partials/covers.html" />
+  </main>
+
+  <footer>
+    <load src="./partials/worktogether.html" />
+  </footer>
+
+  <script type="module" src="./js/aboutme.js" defer></script>
+  <script type="module" src="./js/projects.js" defer></script>
+  <script type="module" src="./js/faq.js" defer></script>
+  <script type="module" src="./js/covers.js" defer></script>
+  <script type="module" src="./main.js" defer></script>
+</body>
+
+</html>

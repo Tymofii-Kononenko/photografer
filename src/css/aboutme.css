@@ -1,0 +1,385 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/** 1 block section 'About me' **/
+
+.section-aboutme {
+    padding-top: 64px;
+}
+
+.section .container-aboutme {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.content-list-aboutme {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content-item-aboutme {
+    height: 500px;
+}
+
+.content-list-aboutme .text {
+    padding: 32px;
+
+    background-color: #242527;
+    border-radius: 24px;
+}
+
+.aboutme-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 117%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+}
+
+.span-functional {
+    color: #ed3b44;
+}
+
+.span-websites {
+    color: rgba(250, 250, 250, 0.4);
+}
+
+.aboutme-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+}
+
+/** 2 block section 'About me' **/
+.accordion-container-aboutme {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ac-aboutme {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ac-header-aboutme {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.4);
+    cursor: pointer;
+    user-select: none;
+}
+
+.ac-trigger-aboutme {
+    background-color: transparent;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    ;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    width: 36px;
+    height: 36px;
+
+    transition: background-color 250ms ease;
+}
+
+.ac-header-aboutme:hover .ac-trigger-aboutme,
+.ac-header-aboutme:focus .ac-trigger-aboutme {
+    background-color: #ed3b44;
+}
+
+.ac-header-aboutme:hover .ac-icon-aboutme,
+.ac-header-aboutme:focus .ac-icon-aboutme {
+    stroke: #1c1d20;
+}
+
+.ac-icon-aboutme {
+    fill: none;
+    stroke: #fafafa;
+
+    transition: stroke 250ms ease,
+        transform 250ms ease;
+}
+
+.is-active-aboutme .ac-icon-aboutme {
+    transform: rotate(-180deg);
+}
+
+.ac-text-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.ac-text-aboutme {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+}
+
+.ac-role-list,
+.ac-education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ac-panel-aboutme {
+    visibility: hidden;
+    transition: max-height ease;
+    transition: height, visibility;
+}
+
+.is-active-aboutme .ac-panel-aboutme {
+    visibility: visible;
+}
+
+.ac-aboutme.js-enabled {
+    overflow: hidden;
+}
+
+/** 3 block section 'About me' **/
+.swiper-container-aboutme {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.swiper-aboutme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    width: 260px;
+    min-width: 0;
+}
+
+.swiper-wrapper-aboutme {
+    display: flex;
+    min-width: 0;
+    width: 260px;
+    user-select: none;
+}
+
+.swiper-slide-aboutme {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    display: block;
+}
+
+.swiper-slide-text-aboutme {
+    width: 100%;
+    height: 130px;
+
+    display: flex;
+    border-radius: 100px;
+    border: 1px solid rgba(250, 250, 250, 0.4);
+    stroke-width: 1px;
+    stroke: #fafafa;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+}
+
+.swiper-slide-active-aboutme {
+    background-color: #ed3b44;
+    border-color: #ed3b44;
+}
+
+.swiper-button-next-aboutme {
+    width: 36px;
+    height: 36px;
+
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 250ms ease;
+}
+
+.swiper-icon-aboutme {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #3b3b3b;
+
+    transition: stroke 250ms ease;
+}
+
+.swiper-button-next-aboutme:hover {
+    background-color: #ed3b44;
+}
+
+.swiper-button-next-aboutme:hover .swiper-icon-aboutme {
+    stroke: #1c1d20;
+}
+
+@media screen and (min-width: 768px) {
+    .section .container-aboutme {
+        gap: 64px;
+        padding-left: 269px;
+    }
+
+    /** 1 block section 'About me' **/
+
+    .content-item-aboutme {
+        height: 700px;
+    }
+
+    .content-list-aboutme .text {
+        padding: 64px;
+        max-width: 704px;
+    }
+
+    .aboutme-title {
+        font-size: 38px;
+        line-height: 105%;
+        letter-spacing: -0.03em;
+    }
+
+    /** 2 block section 'About me' **/
+    .accordion-container-aboutme {
+        gap: 32px;
+    }
+
+    .ac-aboutme {
+        padding-bottom: 32px;
+        gap: 8px;
+    }
+
+    .ac-trigger-aboutme {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ac-icon-aboutme {
+        width: 20px;
+        height: 20px;
+    }
+
+    .ac-text-list {
+        gap: 16px
+    }
+
+    .ac-role-list,
+    .ac-education-list {
+        gap: 12px;
+    }
+
+    /** 3 block section 'About me' **/
+
+    .swiper-aboutme {
+        width: 600px;
+    }
+
+    .swiper-slide-text-aboutme {
+        height: 200px;
+        width: 200px;
+
+        font-size: 20px;
+    }
+
+    .swiper-button-next-aboutme {
+        width: 42px;
+        height: 42px;
+    }
+
+    .swiper-icon-aboutme {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-aboutme {
+        padding-top: 96px;
+        padding-left: 480px;
+    }
+
+    .section .container-aboutme {
+        gap: 96px;
+    }
+
+    /** 1 block section 'About me' **/
+
+    .content-list-aboutme {
+        flex-direction: row;
+    }
+
+    .content-list-aboutme .text {
+        max-width: 680px;
+        height: 700px;
+    }
+
+    /** 2 block section 'About me' **/
+    .ac-panel-aboutme {
+        margin-left: 696px;
+        width: 612px;
+    }
+
+    .ac-text-list {
+        gap: 32px;
+    }
+
+    .ac-role-list,
+    .ac-education-list {
+        gap: 10px;
+    }
+
+    /** 3 block section 'About me' **/
+    .swiper-container-aboutme {
+        gap: 72px;
+        justify-content: flex-start;
+    }
+
+    .swiper-aboutme {
+        width: 1200px;
+    }
+
+    .swiper-icon-aboutme {
+        width: 40px;
+        height: 40px;
+    }
+}

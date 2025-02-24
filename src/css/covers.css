@@ -1,0 +1,155 @@
+.container-covers {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 320px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/img/imgcovers/background-mob.png);
+  backdrop-filter: blur(30px);
+  background-color: rgba(217, 217, 217, 0.04);
+  animation: move 10s infinite ease-in-out;
+}
+
+/* .img-mob {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-mob:hover,
+.img-mob:focus {
+  transform: scale(1.5);
+} */
+
+.img-mob {
+  width: 122px;
+  height: 163px;
+}
+
+.content {
+  height: 508px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx),
+(min-resolution: 192dpi) {
+  .container-covers {
+    background-image: url(/img/imgcovers/background-mob-2x.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .container-covers {
+    background-image: url(/img/imgcovers/background-tab.png);
+    backdrop-filter: blur(30px);
+    background-color: rgba(217, 217, 217, 0.04);
+  }
+
+  .img-mob {
+    height: 314px;
+  }
+
+  .content {
+    position: relative;
+    height: 960px;
+    width: 768px;
+    overflow: hidden;
+  }
+
+  .img-mob {
+    width: 274px;
+    height: 314px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx),
+(min-resolution: 192dpi) {
+  .container-covers {
+    background-image: url(/img/imgcovers/background-tab-2x.png);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .content {
+    position: relative;
+    height: 960px;
+    width: 1440px;
+    overflow: hidden;
+  }
+
+  .container-covers {
+    background-image: url(/img/imgcovers/background-desk.png);
+    backdrop-filter: blur(30px);
+    background-color: rgba(217, 217, 217, 0.04);
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx),
+(min-resolution: 192dpi) {
+  .container-covers {
+    background-image: url(/img/imgcovers/background-desk-2x.png);
+  }
+}
+
+.title-covers {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  max-height: 960px;
+  overflow: hidden;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-300px);
+}
+
+.marquee-inner {
+  display: flex;
+  transform: rotate(16deg);
+  margin-top: 40px;
+}
+
+.marquee-line {
+  flex-shrink: 0;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
