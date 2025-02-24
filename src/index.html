@@ -4,61 +4,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>GelDlaDushy</title>
   <link rel="icon" type="image/svg+xml" href="./img/favicon/faviconport.svg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="preload" href="./css/styles.css" as="style" onload="this.rel='stylesheet'" />
   <noscript>
     <link rel="stylesheet" href="./css/styles.css" />
   </noscript>
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src-elem 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline';">
 </head>
 
 <body>
   <header class="header" id="header">
-    <div id="header-content"></div>
+    <load src="./partials/header.html" />
   </header>
 
   <main>
-    <div id="hero-content"></div>
-    <div id="aboutme-content"></div>
-    <div id="benefits-content"></div>
-    <div id="projects-content"></div>
-    <div id="faq-content"></div>
-    <div id="covers-content"></div>
-    <div id="reviews-content"></div>
+    <load src="./partials/hero.html" />
+    <load src="./partials/aboutme.html" />
+    <load src="./partials/benefits.html" />
+    <load src="./partials/projects.html" />
+    <load src="./partials/faq.html" />
+    <load src="./partials/covers.html" />
   </main>
 
   <footer>
-    <div id="worktogether-content"></div>
+    <load src="./partials/worktogether.html" />
   </footer>
-
-  <script>
-    async function loadContent(id, url) {
-      const response = await fetch(url);
-      const content = await response.text();
-      document.getElementById(id).innerHTML = content;
-    }
-
-    loadContent('header-content', './partials/header.html');
-    loadContent('hero-content', './partials/hero.html');
-    loadContent('aboutme-content', './partials/aboutme.html');
-    loadContent('benefits-content', './partials/benefits.html');
-    loadContent('projects-content', './partials/projects.html');
-    loadContent('faq-content', './partials/faq.html');
-    loadContent('covers-content', './partials/covers.html');
-    loadContent('reviews-content', './partials/reviews.html');
-    loadContent('worktogether-content', './partials/worktogether.html');
-  </script>
 
   <script type="module" src="./js/aboutme.js" defer></script>
   <script type="module" src="./js/projects.js" defer></script>
   <script type="module" src="./js/faq.js" defer></script>
-  <script type="module" src="./js/reviews.js" defer></script>
   <script type="module" src="./js/covers.js" defer></script>
   <script type="module" src="./main.js" defer></script>
 </body>
